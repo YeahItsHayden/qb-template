@@ -16,3 +16,9 @@ end)
 RegisterNetEvent('QBCore:Client:OnPlayerUnload', function() -- This is ran when the player leaves the server
     PlayerData = {}-- Clearing out any stored memory
 end)
+
+CreateThread(function()
+	if LocalPlayer.state['isLoggedIn'] then -- Checks if player is actually fully logged in
+		print("Welcome to the server !") -- Prints a welcome message in F8 if logged in
+	end
+end)
