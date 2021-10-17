@@ -1,12 +1,12 @@
 local QBCore = exports['qb-core']:GetCoreObject() -- We've ALWAYS got to grab our core object
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function() -- When a player is loaded, it will grab all of the players information
-	PlayerData = QBCore.Functions.GetPlayerData()
-	firstname = PlayerData.charinfo.firstname
-	lastname = PlayerData.charinfo.lastname
-	phone = PlayerData.charinfo.phone
-	job = PlayerData.job.name
-	rank = PlayerData.job.grade.name
+	PlayerData = QBCore.Functions.GetPlayerData() -- Grabs the player data (see https://qbcore-framework.github.io/qb-docs/docs/player for more info)
+	firstname = PlayerData.charinfo.firstname -- Sets the players firstname as the variable firstname (so instead of doing PlayerData.charinfo.firstname, you can just do firstname)
+	lastname = PlayerData.charinfo.lastname -- Same as above
+	phone = PlayerData.charinfo.phone -- Same as above
+	job = PlayerData.job.name -- Same as above
+	rank = PlayerData.job.grade.name -- Same as above
 end)
 
 RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo) -- When a player swaps jobs, it will grab the players new job
