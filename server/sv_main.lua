@@ -1,4 +1,4 @@
-QBCore = exports['qb-core']:GetCoreObject() -- Grabs our core object
+local QBCore = exports['qb-core']:GetCoreObject() -- Grabs our core object
 
 RegisterNetEvent('qb-template:server:grabPlayerData', function(source) -- An example event that can be used to grab player data
     local src = source -- Defines source as src
