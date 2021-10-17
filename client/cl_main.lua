@@ -19,6 +19,6 @@ end)
 
 CreateThread(function()
 	if LocalPlayer.state['isLoggedIn'] then -- Checks if player is actually fully logged in
-		print("Welcome to the server !") -- Prints a welcome message in F8 if logged in
+		print(Config.WelcomeText) -- Prints a message using the text set in the Config in F8 if logged in
 	end
 end)
